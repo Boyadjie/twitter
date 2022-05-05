@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @hashtags_to_tweet %>
+
+<div>
+  <%= link_to "Edit this hashtag to tweet", edit_hashtags_to_tweet_path(@hashtags_to_tweet) %> |
+  <%= link_to "Back to hashtag to tweets", hashtags_to_tweets_path %>
+
+  <%= button_to "Destroy this hashtag to tweet", @hashtags_to_tweet, method: :delete %>
+</div>

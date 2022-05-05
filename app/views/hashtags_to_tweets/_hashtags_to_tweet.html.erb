@@ -1,0 +1,6 @@
+<div id="<%= dom_id hashtags_to_tweet %>">
+  <p>
+    <strong>Hashtags to tweets:</strong>
+    <%= "##{hashtags_to_tweet.hashtag.hashtag}" %> / <%= [hashtags_to_tweet.tweet.body, "@#{hashtags_to_tweet.tweet.user.nickname}"].join(' - ') %>
+  </p>
+</div>

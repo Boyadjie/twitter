@@ -1,0 +1,17 @@
+<%= form_with(model: hashtags_to_tweet) do |form| %>
+  <% if hashtags_to_tweet.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(hashtags_to_tweet.errors.count, "error") %> prohibited this hashtags_to_tweet from being saved:</h2>
+
+      <ul>
+        <% hashtags_to_tweet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

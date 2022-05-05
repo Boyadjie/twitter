@@ -32,6 +32,11 @@
   </div>
 
   <div>
+    <%= form.label :hashtags, style: "display: block" %>
+    <%= form.text_area :new_hashtags, cols: "20", rows: "15" %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

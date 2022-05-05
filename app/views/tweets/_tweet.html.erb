@@ -6,7 +6,7 @@
 
   <p>
     <strong>User:</strong>
-    <%= tweet.user %>
+    <%= "@#{tweet.user.nickname}" %>
   </p>
 
   <p>
@@ -16,7 +16,16 @@
 
   <p>
     <strong>Likes:</strong>
-    <%= tweet.likes %>
+    <%# playing with vue may be deleted %>
+    <% if tweet.likes.to_s.size > 3 && tweet.likes.to_s.size <= 6 %>
+      <% unit = 'k' %>
+    <% elsif tweet.likes.to_s.size > 6 && tweet.likes.to_s.size <= 9 %>
+      <% unit = 'M' %>
+    <% else %>
+      <% unit = '' %>
+    <% end %>
+
+    <%= tweet.likes %> <%= unit %>
   </p>
 
 </div>
