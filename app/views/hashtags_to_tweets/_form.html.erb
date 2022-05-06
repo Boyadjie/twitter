@@ -11,6 +11,9 @@
     </div>
   <% end %>
 
+  <% htts = hashtags_to_tweet.find_hashtags_of_tweet(hashtags_to_tweet.tweet_id) %>
+  <%= htts.map { |h| h.hashtag.hashtag } %>
+
   <div>
     <%= form.submit %>
   </div>
