@@ -11,9 +11,13 @@
     </div>
   <% end %>
 
-  <% htts = hashtags_to_tweet.find_hashtags_of_tweet(hashtags_to_tweet.tweet_id) %>
-  <%= htts.map { |h| h.hashtag.hashtag } %>
-
+  <ul>
+    <% htts = hashtags_to_tweet.find_hashtags_of_tweet(hashtags_to_tweet.tweet_id) %>
+    <% hashtag_list = htts.map { |h| h.hashtag.hashtag } %>
+    <% hashtag_list.each do |h| %>
+      <li><%= h %></li>
+    <% end %>
+  </ul>
   <div>
     <%= form.submit %>
   </div>

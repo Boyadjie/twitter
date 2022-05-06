@@ -7,6 +7,7 @@
     <%= render hashtags_to_tweet %>
     <p>
       <%= link_to "Show this hashtag to tweet", hashtags_to_tweet %>
+      <%= button_to "Delete this Relation", hashtags_to_tweet, method: :delete, form: { data: { turbo_confirm: "Are you sure?" } } %>
     </p>
   <% end %>
 </div>
